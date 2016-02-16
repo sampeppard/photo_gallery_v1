@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<title>Alanna's JavaScript slide show tutorial</title>
+
+<script language="JavaScript">
+
+var interval = 1500;
+var random_display = 0;
+var imageDir = "img/";
+
+var imageNum = 0;
+imageArray = new Array();
+imageArray[imageNum++] = new imageItem(imageDir + "01.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "02.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "03.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "04.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "05.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "06.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "07.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "08.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "09.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "10.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "11.jpg");
+imageArray[imageNum++] = new imageItem(imageDir + "12.jpg");
+
+var totalImages = imageArray.length;
+
+function imageItem(image_location) {
+	this.image_item = new Image();
+
+	this.image_item.src = image_location;
+}
+
+function get_ImageItemLocation(imageObj) {
+	return(imageObj.image_item.src);
+}
+
+function getPrevImage() {
+
+	imageNum = (imageNum-1) % totalImages;
+
+	var new_image = get_ImageItemLocation(imageArray[imageNum]);
+
+	return(new_image);
+
+}
+
+function prevImage(place) {
+
+	var new_image = getPrevImage();
+
+	document[place].src = new_image;
+
+}
+
+function switchImage(place) {
+
+	var new_image = getNextImage();
+
+	document[place].src = new_image;
+
+	var recur_call = "switchImage('"+place+"')";
+
+	timerID = setTimeout(recur_call, interval);
+
+}
+
+</script>
+
+</head>
+
+<body>
+	<img name="slideImg" src="27.jpg" width=500 height=375 border=0>
+	<a href="#" onClick="switchImage('slideImg')">play slide show</a>
+	<a href="#" onClick="prevImage('slideImg'); clearTimeout(timerID)"> previous</a>
+	<a href="#" onClick="switchImage('slideImg'); clearTimeout(timerID)">next </a>
+	<a href="#" onClick="clearTimeout(timerID)"> pause</a>
+</body>
+
+</html

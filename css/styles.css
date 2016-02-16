@@ -1,0 +1,182 @@
+/* Global Layout Set-up -----------------*/
+* { 
+  box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #4a4a4a;
+  background-color: #fff;
+}
+
+ul {
+
+}
+
+li {
+    list-style: none;
+    display:inline-block;
+}
+
+
+/* Link Styles */
+
+a {
+  text-decoration: none;
+}
+a:hover {
+}
+
+/* Section Styles -----------------*/
+
+/* Header Styles */
+
+header {
+    width:100%;
+    padding:2.1em 0;
+    position: fixed;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 100px
+}
+
+header input {
+    width: 460px;
+    font-size: 1em;
+    border-radius: 5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius: 5px;
+    background-color: white;
+    border: solid 1px #999;
+    margin:0;
+    padding:0.7em 1em;
+    color:#999;
+    font-weight: lighter;
+}
+
+/* Main Content Styles */
+
+.spacer {
+    height:100px;
+}
+
+.main-content {
+    width:100%;
+    margin:20px 0 0 0;
+    padding:0;
+}
+ 
+.gallery {
+    width:1053px;
+    margin:0 auto;
+    padding:0;
+    height:auto;
+}
+
+.gallery li img {
+    width:auto;
+    margin:0;
+    padding:0;
+    width:200px;
+    margin:30px;
+    display: inline-block;
+    float: left;
+    border: none;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+
+.overlay {
+    position: fixed;
+    width:100vw;
+    height:100vh;
+    top: 0;
+    left: 0;
+    background:rgba(0,0,0,0.7);
+    display: none;
+}
+
+.close-space {
+    position: fixed;
+    width:100vw;
+    height:100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#slideshow {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width:600px;
+    height:450px;
+    margin:10% auto 0 auto;
+    padding:0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#slideshow ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+    position: absolute;
+}
+
+#slideshow li {
+    float:left;
+}
+
+#slideshow ul li img {
+    width:600px;
+}
+
+#slideshow ul li .text-box {
+    width:600px;
+}
+
+#slideshow ul li p {
+    text-align: center;
+    color: white;
+}
+
+#slideshow a:hover{
+    background: rgba(0,0,0,0.8);
+            border-color: #000;
+}
+
+#slideshow a:active{
+    background: #990;
+}
+
+.slideshow-prev, .slideshow-next{
+    position: absolute;
+    top:180px;
+    font-size: 30px;
+    text-decoration: none;
+    color:#fff;
+    background: rgba(0,0,0,0.5);
+    padding: 5px;
+    z-index:3;
+}
+        
+.slideshow-prev{
+    left:0px;
+    border-left: 3px solid #fff;
+}
+
+.slideshow-next{
+    right:0px;
+    border-right: 3px solid #fff;
+}
+
+.caption {
+    color:white;
+    text-align: center;
+}
+    
+
