@@ -46,9 +46,9 @@ For comments or questions, please email sampeppard@gmail.com
 * jQuery
 
 ----
-### **Github Pages Link**
+### **Link to project on Github Pages**
 
-
+https://sampeppard.github.io/slickbox/
 
 ----
 ### **License**
